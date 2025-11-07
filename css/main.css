@@ -1,2 +1,96 @@
-@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@0,100..900;1,100..900&display=swap");
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 12px;
+  color: #333;
+  background: #ffffff;
+  overflow-x: hidden;
+}
 
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+address {
+  font-style: normal;
+}
+
+.h_on {
+  background: rgba(255, 255, 255, 0.9) !important;
+}
+
+.h_txt_color {
+  color: #333 !important;
+}
+
+.modal {
+  position: absolute;
+  z-index: 10000;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+}
+.modal > .m_inner {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  height: 400px;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.m_inner label {
+  color: #ffffff;
+}
+
+#c_btn {
+  position: absolute;
+  right: 10px;
+}
+
+main {
+  overflow: hidden;
+  clear: both;
+}
+main > #movie {
+  height: 100vh;
+  background: #ccc;
+}
+main > #movie > video {
+  width: 100%;
+}
+main #top3 {
+  height: 1146px;
+  background: cornsilk;
+}
+main #intro {
+  height: 923px;
+  background: #e9cc58;
+}
+main #test_drive {
+  height: 923px;
+  background: #3450ee;
+}
+main #event {
+  height: 923px;
+  background: #19dbc1;
+}
+main #buy {
+  height: 923px;
+  background: #0ed159;
+}
+main #customer {
+  height: 923px;
+  background: #ebdc11;
+}/*# sourceMappingURL=main.css.map */

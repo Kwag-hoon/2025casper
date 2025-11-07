@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+@import 'common';
+
+main{
+  overflow: hidden;
+  clear: both;  // 헤더 영역에서 혹시 사용된 float속성이 있다면, 해제 한다. 
+  > #movie{
+   height: 100vh;
+   background: $line_color_g;
+   >video{
+    width: 100%;
+   }
+
+  }
+  #top3{
+    height: 1146px;
+    background: cornsilk;
+  }
+  #intro{
+    height: 923px; background: #e9cc58;
+  }
+  #test_drive{
+    height: 923px; background: #3450ee;
+  }
+  #event{
+    height: 923px; background: #19dbc1;
+  }
+  #buy{
+    height: 923px; background: #0ed159;
+  }
+  #customer{
+    height: 923px; background: #ebdc11;
+  }
+
+}
