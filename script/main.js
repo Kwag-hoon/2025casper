@@ -85,7 +85,7 @@ $(document).ready(function () {
       if(ch.is(':checked')){  //체크 박스가 체크가 되면 쿠키를 생성하고 저장
         $.cookie('popup', 'none', {expires:1, path:'/'}); // 쿠키 파일 저장
         $('.modal').fadeOut(); // 모달 윈도우 사라지게 하기
-      }else{
+      }else{"'"
         // 체크 박스에 체크를 하지 않은 경우 라면 그냥 모달 윈도를 닫는다. 
         $('.modal').fadeOut();
       }
