@@ -2,35 +2,286 @@
 
 @import 'common';
 
-main{
+// 마진값 설정
+$m_value: 80px;
+
+main {
   overflow: hidden;
-  clear: both;  // 헤더 영역에서 혹시 사용된 float속성이 있다면, 해제 한다. 
-  > #movie{
-   height: 100vh;
-   background: $line_color_g;
-   >video{
-    width: 100%;
-   }
+  clear: both; // 헤더 영역에서 혹시 사용된 float속성이 있다면, 해제 한다. 
+
+  >#movie {
+    height: 100vh;
+    background: $line_color_g;
+
+    >video {
+      width: 100%;
+    }
 
   }
-  #top3{
-    height: 1146px;
+
+  #top3 {
+    // height: 1146px;
     background: cornsilk;
   }
-  #intro{
-    height: 923px; background: #e9cc58;
-  }
-  #test_drive{
-    height: 923px; background: #3450ee;
-  }
-  #event{
-    height: 923px; background: #19dbc1;
-  }
-  #buy{
-    height: 923px; background: #0ed159;
-  }
-  #customer{
-    height: 923px; background: #ebdc11;
+
+  #intro {
+    height: 923px;
+    background: #e9cc58;
   }
 
+  #test_drive {
+    height: 923px;
+    background: #3450ee;
+  }
+
+  #event {
+    height: 923px;
+    background: #19dbc1;
+  }
+
+  #buy {
+    height: 923px;
+    background: #0ed159;
+  }
+
+  #customer {
+    height: 923px;
+    background: #ebdc11;
+  }
+
+  #movie {
+    height: 100vh;
+    background: $line_color_g;
+    overflow: hidden;
+
+    .m_info {
+      position: absolute;
+      width: 100%;
+      top: 46%;
+      text-align: center;
+      color: $txt_color2;
+      z-index: 100;
+
+      >h2 {
+        font-size: 60px;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+
+      >p {
+        line-height: 80px;
+        font-size: $t_size_m;
+      }
+
+      a {
+        color: $txt_color2;
+        font-size: 14px;
+        text-decoration: underline;
+        margin: 0px 20px;
+        padding: 5px 10px;
+      }
+
+      /* 첫번째 메뉴 서식 배경색 적용 */
+      a:first-of-type {
+        background: $nav_color02;
+      }
+
+    }
+
+    // 무비에서 다음페이지로 이동 버튼
+    @mixin arrow_btn {
+
+      border-left: 1px solid $txt_color2;
+      border-bottom: 1px solid $txt_color2;
+      transform: rotate(-45deg);
+      width: 40px;
+      height: 40px;
+
+    }
+
+    #next_btn {
+
+      display: inline-block;
+      text-indent: -9999px;
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      @include arrow_btn();
+
+    }
+  }
+
+  /* movie 끝 */
+
+  // 콘텐츠 제목서식
+  @mixin m_title {
+    font-size: $t_size_t3;
+    text-align: center;
+    font-weight: bold;
+    padding: $m_value 0px 10px 0px;
+  }
+
+  @mixin btn() {
+    border: 1px solid $txt_color1;
+    background: $txt_color2;
+    padding: 8px 26px;
+  }
+
+  /* 두번째 컨텐츠 top3 시작 */
+  //  top3, intro, test_drive, event, buy
+  .m_title {
+    margin: $m_value 0px 0px 0px;
+    @include m_title()
+  }
+
+  // 2. top3 가장 많이 찾는 캐스퍼 
+  #top3 {
+    text-align: center;
+
+    >.p01 {
+      font-size: $t_size_m;
+      line-height: 50px;
+    }
+
+    // 슬라이드 서식
+    .top3 {
+      position: relative;
+      margin-top: 50px;
+      padding: 20px 0px 50px 0px;
+
+      >.swiper-wrapper {
+        width: 100%;
+        height: 100%;
+
+        .rank {
+          color: #327186;
+          border: 1px solid #327186;
+          padding: 6px 30px;
+          border-radius: 20px;
+          font-size: $t_size_ss;
+        }
+
+        .top3_title {
+          font-size: $t_size_t1;
+          font-weight: 500;
+          padding-top: 30px;
+          color: $txt_color5;
+        }
+
+        // 자동차 사진
+        img {
+          width: 400px;
+          padding: $m_value 0px;
+          transition: 0.8s;
+          transition-timing-function: cubic-bezier(0.1,1.0);
+          transform: scale(0.7);
+        }
+        // 이미지 멈출때 이미지 크게 하기
+
+
+
+        //  슬라이드 상세
+        .detail {
+          // border: 1px solid #f00;
+          display: flex;
+          justify-content: center;
+          padding-bottom: 60px;
+
+          >li {
+            width: 190px;
+            padding-left: 0px 20px;
+            text-align: left;
+            line-height: 20px;
+            font-size: $t_size_m;
+            border-right: 1px solid $line_color_g;
+          }
+
+          >li:last-child {
+            border: none;
+            padding-top: 6px;
+          }
+
+          .price {
+            font-size: $t_size_t1;
+            font-weight: bold;
+            color: $txt_color5;
+          }
+        }
+
+        .btn {
+          @include btn;
+          cursor: pointer;
+        }
+
+        .price {
+          font-size: $t_size_t1;
+          font-weight: bold;
+          color: $txt_color5;
+          font-style: normal;
+        }
+      }
+
+
+
+      // 색상 박스 
+      .outer_color,
+      .inner_color {
+        display: inline-block;
+        width: 56px;
+        height: 40px;
+        text-indent: -99999px;
+        float: left;
+        margin-right: 10px;
+      }
+
+      .kaki {
+        background: #494b3e;
+      }
+
+      .black {
+        background: #000;
+      }
+
+      .white {
+        background: #fff;
+        border: 1px solid #ccc;
+      }
+
+      .orage {
+        background: rgb(190, 86, 0);
+      }
+    }
+  }
+  // 스와이퍼 슬라이드 콘트롤 버튼 서식
+  #top3 .swiper-pagination-bullet{
+    width: 60px !important;
+    height: 5px !important;
+    background: $txt_color4 !important;
+    border-radius: 0px !important;
+    margin: 0 5px !important;
+
+  }
+  #top3 .swiper-button-next,
+  #top3 .swiper-button-prev{
+    color: $txt_color3;
+  }
+  // 2. top3 가장 많이 찾는 캐스퍼 서식 끝
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
+
+/* main  끝 */

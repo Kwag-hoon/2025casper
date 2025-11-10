@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@0,100..900;1,100..900&display=swap");
 body {
   font-family: "Noto Sans KR", sans-serif;
@@ -30,10 +31,45 @@ address {
   color: #333 !important;
 }
 
+.modal {
+  position: fixed;
+  z-index: 10000;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.m_inner {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  width: 400px;
+  height: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.m_inner img {
+  width: 100%;
+}
+
+.m_inner label {
+  color: #ffffff;
+}
+
+#c_btn {
+  position: absolute;
+  right: 10px;
+}
 
 main {
   overflow: hidden;
   clear: both;
+  /* movie 끝 */
+  /* 두번째 컨텐츠 top3 시작 */
 }
 main > #movie {
   height: 100vh;
@@ -43,7 +79,6 @@ main > #movie > video {
   width: 100%;
 }
 main #top3 {
-  height: 1146px;
   background: cornsilk;
 }
 main #intro {
@@ -65,4 +100,162 @@ main #buy {
 main #customer {
   height: 923px;
   background: #ebdc11;
-}/*# sourceMappingURL=main.css.map */
+}
+main #movie {
+  height: 100vh;
+  background: #ccc;
+  overflow: hidden;
+}
+main #movie .m_info {
+  position: absolute;
+  width: 100%;
+  top: 46%;
+  text-align: center;
+  color: #ffffff;
+  z-index: 100;
+  /* 첫번째 메뉴 서식 배경색 적용 */
+}
+main #movie .m_info > h2 {
+  font-size: 60px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+main #movie .m_info > p {
+  line-height: 80px;
+  font-size: 16px;
+}
+main #movie .m_info a {
+  color: #ffffff;
+  font-size: 14px;
+  text-decoration: underline;
+  margin: 0px 20px;
+  padding: 5px 10px;
+}
+main #movie .m_info a:first-of-type {
+  background: #006EFF;
+}
+main #movie #next_btn {
+  display: inline-block;
+  text-indent: -9999px;
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-left: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+  transform: rotate(-45deg);
+  width: 40px;
+  height: 40px;
+}
+main .m_title {
+  margin: 80px 0px 0px 0px;
+  font-size: 34px;
+  text-align: center;
+  font-weight: bold;
+  padding: 80px 0px 10px 0px;
+}
+main #top3 {
+  text-align: center;
+}
+main #top3 > .p01 {
+  font-size: 16px;
+  line-height: 50px;
+}
+main #top3 .top3 {
+  position: relative;
+  margin-top: 50px;
+  padding: 20px 0px 50px 0px;
+}
+main #top3 .top3 > .swiper-wrapper {
+  width: 100%;
+  height: 100%;
+}
+main #top3 .top3 > .swiper-wrapper .rank {
+  color: #327186;
+  border: 1px solid #327186;
+  padding: 6px 30px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+main #top3 .top3 > .swiper-wrapper .top3_title {
+  font-size: 22px;
+  font-weight: 500;
+  padding-top: 30px;
+  color: #052B58;
+}
+main #top3 .top3 > .swiper-wrapper img {
+  width: 400px;
+  padding: 80px 0px;
+  transition: 0.8s;
+  transition-timing-function: cubic-bezier(0.1, 1);
+  transform: scale(0.7);
+}
+main #top3 .top3 > .swiper-wrapper .detail {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 60px;
+}
+main #top3 .top3 > .swiper-wrapper .detail > li {
+  width: 190px;
+  padding-left: 0px 20px;
+  text-align: left;
+  line-height: 20px;
+  font-size: 16px;
+  border-right: 1px solid #ccc;
+}
+main #top3 .top3 > .swiper-wrapper .detail > li:last-child {
+  border: none;
+  padding-top: 6px;
+}
+main #top3 .top3 > .swiper-wrapper .detail .price {
+  font-size: 22px;
+  font-weight: bold;
+  color: #052B58;
+}
+main #top3 .top3 > .swiper-wrapper .btn {
+  border: 1px solid #333;
+  background: #ffffff;
+  padding: 8px 26px;
+  cursor: pointer;
+}
+main #top3 .top3 > .swiper-wrapper .price {
+  font-size: 22px;
+  font-weight: bold;
+  color: #052B58;
+  font-style: normal;
+}
+main #top3 .top3 .outer_color,
+main #top3 .top3 .inner_color {
+  display: inline-block;
+  width: 56px;
+  height: 40px;
+  text-indent: -99999px;
+  float: left;
+  margin-right: 10px;
+}
+main #top3 .top3 .kaki {
+  background: #494b3e;
+}
+main #top3 .top3 .black {
+  background: #000;
+}
+main #top3 .top3 .white {
+  background: #fff;
+  border: 1px solid #ccc;
+}
+main #top3 .top3 .orage {
+  background: rgb(190, 86, 0);
+}
+main #top3 .swiper-pagination-bullet {
+  width: 60px !important;
+  height: 5px !important;
+  background: #3B8BAE !important;
+  border-radius: 0px !important;
+  margin: 0 5px !important;
+}
+main #top3 .swiper-button-next,
+main #top3 .swiper-button-prev {
+  color: #225499;
+}
+
+/* main  끝 *//*# sourceMappingURL=main.css.map */
