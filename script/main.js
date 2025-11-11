@@ -115,14 +115,14 @@ $(document).ready(function () {
         // 아이콘 색상 변경
         h_icon.addClass('h_txt_color');
         // 로고 이미지 속성 src값 변경
-        h1.attr('src', './images/logo-casper_black.png');
+        h1.attr('src', '../images/logo-casper_black.png');
       });
 
     } else {
       gnb.removeClass('h_txt_color');
       $('header').removeClass('h_on');
       h_icon.removeClass('h_txt_color');
-      h1.attr('src', './images/logo-casper-white.png');
+      h1.attr('src', '../images/logo-casper-white.png');
 
       $('header').mouseleave(function () {
         //3개 변수 값에 .h_txt_color서식을 제거한다.
@@ -132,24 +132,22 @@ $(document).ready(function () {
         // 아이콘 색상 변경
         h_icon.removeClass('h_txt_color');
         // 로고 이미지 속성 src값 변경
-        h1.attr('src', './images/logo-casper-white.png');
-
+        h1.attr('src', '../images/logo-casper-white.png');
       });
-
-
+    }
+    // 소개 페이지 텍스트 애니메이션
+    //  화면 세로 스크롤 1,740이상일 경우 
+    if (sPos >= 1690) {
+      $('.intro_title_left').stop().animate({ 'left': '130px' }, 500);
+      $('.intro_title_right').stop().delay(500).animate({ 'right': '150px' }, 500);
     }
   });
 
 
-
-
-
-
-
-
 });      //제이쿼리
 
-$(function() {
+
+$(function () {
   var swiper = new Swiper('.top3', {
     loop: true,
     slidesPerView: 1,
@@ -160,6 +158,25 @@ $(function() {
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
+    },
+    autoplay: {
+      delay: 3500,
+      disableOnInteraction: false,
+    },
+  });
+});
+
+$(function () {
+  var swiper = new Swiper('.event', {
+    loop: true,
+    slidesPerView: 1,
+    pagination: {
+      el: '.event .swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.event .event .swiper-button-next',
+      prevEl: '.event .swiper-button-prev',
     },
     autoplay: {
       delay: 3500,
