@@ -2,6 +2,7 @@
 
 @use 'common' as *;
 
+
 // 마진값 설정
 $m_value: 80px;
 
@@ -20,10 +21,10 @@ main {
   }
 
 
-  #intro {
-    // height: 923px;
-    background: #e9cc58;
-  }
+  // #intro {
+  //   // height: 923px;
+  //   background: #e9cc58;
+  // }
 
 
   #event {
@@ -31,17 +32,8 @@ main {
     // background: #19dbc1;
   }
 
-  #buy {
-    height: 923px;
-    background: #0ed159;
-  }
-
-  #customer {
-    height: 923px;
-    background: #ebdc11;
-  }
-
   #movie {
+   
     height: 100vh;
     background: $line_color_g;
     overflow: hidden;
@@ -88,13 +80,11 @@ main {
       transform: rotate(-45deg);
       width: 40px;
       height: 40px;
-
     }
-
     #next_btn {
-
       display: inline-block;
-      text-indent: -9999px;
+      // text-indent: -9999px;
+      font-size: 0;
       position: absolute;
       bottom: 40px;
       left: 50%;
@@ -125,7 +115,7 @@ main {
   //  top3, intro, test_drive, event, buy
   .m_title {
     margin: $m_value 0px 0px 0px;
-    @include m_title()
+    @include m_title();
   }
 
 
@@ -358,7 +348,7 @@ main {
 }
 
 .test_d_btn1 {
-  @include btn1
+  @include btn1;
 }
 
 .test_d_btn2 {
@@ -422,14 +412,239 @@ main {
 }
 
 
+//6. 구매하기
+#buy {
+  text-align: center;
+
+  >.p01 {
+    font-size: $t_size_m;
+    line-height: 50px;
+  }
+
+  h3 {
+    font-size: $t_size_t2;
+    padding: 40px 0px 20px 0px;
+    font-weight: bold;
+  }
+
+  .t_color {
+    color: $txt_color4;
+  }
+
+  .buy_info_list {
+    display: grid;
+    width: 1200px;
+    margin: 0 auto;
+    grid-template-columns: repeat(3, 33.333333%);
+
+  }
+
+  li {
+    padding-top: 50px;
+
+    >h4 {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    >img {
+      width: 80px;
+      padding: 15px 0;
+    }
+
+    >.p02 {
+      line-height: 20px;
+    }
 
 
 
+  }
+
+  li:last-child {
+    grid-area: 3/1/4/4;
+
+    // text-align: center;
+    iframe {
+
+      height: 560px;
+    }
+  }
+}
+
+#customer {
+  background: $bg_color_light_g;
+
+  >article {
+    padding: 24px 0;
+    width: 1200px;
+    height: 260px;
+    margin: 15px auto;
+    background: $txt_color2;
+
+
+    >h3 {
+      font-size: 18px;
+      text-align: center;
+      padding: 60px 0px 20px 0px;
+    }
+
+    .ars_left {
+      width: 50%;
+      border-right: 1px solid $line_color_g;
+
+
+    }
+
+    .ars_left,
+    .ars_right {
+      width: 50%;
+      padding: 20px 30px;
+      float: left;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: space-around;
+
+      >p {
+        display: flex;
+        flex-direction: column;
+        line-height: 30px;
+        text-align: center;
+        align-items: center;
+
+        >a {
+          color: $nav_color02;
+          font-weight: bold;
+        }
+      }
+
+      dl {
+        line-height: 24px;
+      }
+
+      dt {
+        font-weight: bold;
+      }
+    }
+
+    strong {
+      font-weight: 500px;
+      font-size: $t_size_m;
+    }
+
+    // 아이콘 배경서식
+    .car_icon,
+    .member_icon {
+      background: url('../images/bg-support-ars.png');
+      display: inline-flex;
+      height: 46px;
+      text-indent: -9999px;
+      margin-top: 30px;
+    }
+
+    // 아이콘 크기 각각 설정, 크기지정함. 
+    .car_icon {
+      width: 75px;
+
+    }
+
+    .member_icon {
+      width: 60px;
+      
+      background-position: -90px 0px;
+      transform: translateY(-30px);
+    }
+  }
+
+  .cs_etc {
+    // position: relative;
+    display: grid;
+    width: 1200px;
+    margin: 0 auto;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
 
 
 
+    li {
+      position: relative;
+      // border: 1px solid $line_color_g;
+      background: $txt_color2;
+      padding: 20px;
+      height: 200px;
+      // text-align: left;
+      margin-bottom: 36px;
 
+      h3 {
+        font-size: 18px;
+        line-height: 50px;
+      }
+      p{
+        line-height: 20px;
+      }
+      >a img{
+        display: block;
+        margin: 0 auto;
+        padding: 12px 0;
+      }
+    }
 
+    li:first-of-type{
+      >a:first-of-type{
+        color: $nav_color02;
+        line-height: 30px;
+        font-weight: 500;
 
+      }
+    }
+    >.btn01{
+      transform: translateX(100px);
+      display:inline-block;
+      // margin: 0 auto;
 
-/* main  끝 */
+    }
+    li:last-of-type{
+
+      .appdown{
+        text-align: center;
+        margin: 0 auto;
+      >a{
+        color: $nav_color02;
+        padding-right: 10px;
+        font-weight: 500;
+      }
+      }
+    }
+
+  }
+
+  .ad{
+    padding: 0;
+    margin-bottom: 30px;
+    width: 1200px;
+    height: 300px;
+    >h3{
+      font-size: 0;
+    }
+  }
+  
+}
+
+// 플로트 속성 해제
+.clearfix {
+  clear: both;
+  content: '';
+  display: block;
+}
+#customer .cs_etc .btn01{
+    @include btn1;
+    display: block;
+    position: absolute;
+    // transform: -50%;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0 auto; 
+    text-align: center;
+    width: 100px;
+
+  }

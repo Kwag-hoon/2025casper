@@ -1,0 +1,83 @@
+@charset "UTF-8";
+@use 'common' as *;
+//sub.scss
+
+//서브페이지 헤더, 푸터 공통 서식
+body {
+  height: 100%;
+}
+
+header {
+  position: static;
+
+}
+
+header nav .gnb a {
+  color: $txt_color1;
+
+}
+
+header .nav_icon span.fas {
+
+  color: $txt_color1;
+
+}
+
+main {
+  position: relative;
+  top: 0;
+  background: $bg_color_light_g;
+  padding: 150px 0 210px;
+
+
+  fieldset {
+    text-align: center;
+
+    legend {
+      font-size: $t_size_t2;
+      padding-bottom: 30px;
+      font-weight: 600;
+      color: $txt_color1;
+    }
+
+    input[type=text] {
+      width: 360px;
+      height: 40px;
+      margin-top: 10px;
+      text-indent: 10px;
+      border: none;
+    }
+
+    p:nth-child(4) {
+      transform: translateX(-140px);
+      padding: 16px 0;
+    }
+
+    input[type=submit] {
+      // padding: 10px 60px;
+      color: $txt_color2;
+      background: $txt_color3;
+      line-height: 30px;
+      border: none;
+      width: 360px;
+      height: 40px;
+      margin-bottom: 16px;
+      cursor: pointer;
+    }
+
+    a {
+      padding: 3px 16px;
+      border-right: 1px solid $line_color_g;
+      box-sizing: border-box;
+
+    }
+
+    a:last-of-type {
+      border-right: none !important;
+    }
+
+
+
+  }
+
+}

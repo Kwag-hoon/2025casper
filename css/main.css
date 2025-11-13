@@ -39,12 +39,12 @@ address {
   top: 0px;
   left: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.8);
 }
 
 .m_inner {
   position: absolute;
-  top: 10%;
+  top: 50%;
   left: 50%;
   width: 400px;
   height: 50%;
@@ -78,19 +78,8 @@ main > #movie {
 main > #movie > video {
   width: 100%;
 }
-main #intro {
-  background: #e9cc58;
-}
 main #event {
   height: 600px;
-}
-main #buy {
-  height: 923px;
-  background: #0ed159;
-}
-main #customer {
-  height: 923px;
-  background: #ebdc11;
 }
 main #movie {
   height: 100vh;
@@ -127,7 +116,7 @@ main #movie .m_info a:first-of-type {
 }
 main #movie #next_btn {
   display: inline-block;
-  text-indent: -9999px;
+  font-size: 0;
   position: absolute;
   bottom: 40px;
   left: 50%;
@@ -371,4 +360,188 @@ main .orage {
   border-radius: 20px;
 }
 
-/* main  끝 *//*# sourceMappingURL=main.css.map */
+#buy {
+  text-align: center;
+}
+#buy > .p01 {
+  font-size: 16px;
+  line-height: 50px;
+}
+#buy h3 {
+  font-size: 20px;
+  padding: 40px 0px 20px 0px;
+  font-weight: bold;
+}
+#buy .t_color {
+  color: #3B8BAE;
+}
+#buy .buy_info_list {
+  display: grid;
+  width: 1200px;
+  margin: 0 auto;
+  grid-template-columns: repeat(3, 33.333333%);
+}
+#buy li {
+  padding-top: 50px;
+}
+#buy li > h4 {
+  font-size: 18px;
+  font-weight: bold;
+}
+#buy li > img {
+  width: 80px;
+  padding: 15px 0;
+}
+#buy li > .p02 {
+  line-height: 20px;
+}
+#buy li:last-child {
+  grid-area: 3/1/4/4;
+}
+#buy li:last-child iframe {
+  height: 560px;
+}
+
+#customer {
+  background: #ededed;
+}
+#customer > article {
+  padding: 24px 0;
+  width: 1200px;
+  height: 260px;
+  margin: 15px auto;
+  background: #ffffff;
+}
+#customer > article > h3 {
+  font-size: 18px;
+  text-align: center;
+  padding: 60px 0px 20px 0px;
+}
+#customer > article .ars_left {
+  width: 50%;
+  border-right: 1px solid #ccc;
+}
+#customer > article .ars_left,
+#customer > article .ars_right {
+  width: 50%;
+  padding: 20px 30px;
+  float: left;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+}
+#customer > article .ars_left > p,
+#customer > article .ars_right > p {
+  display: flex;
+  flex-direction: column;
+  line-height: 30px;
+  text-align: center;
+  align-items: center;
+}
+#customer > article .ars_left > p > a,
+#customer > article .ars_right > p > a {
+  color: #006EFF;
+  font-weight: bold;
+}
+#customer > article .ars_left dl,
+#customer > article .ars_right dl {
+  line-height: 24px;
+}
+#customer > article .ars_left dt,
+#customer > article .ars_right dt {
+  font-weight: bold;
+}
+#customer > article strong {
+  font-weight: 500px;
+  font-size: 16px;
+}
+#customer > article .car_icon,
+#customer > article .member_icon {
+  background: url("../images/bg-support-ars.png");
+  display: inline-flex;
+  height: 46px;
+  text-indent: -9999px;
+  margin-top: 30px;
+}
+#customer > article .car_icon {
+  width: 75px;
+}
+#customer > article .member_icon {
+  width: 60px;
+  background-position: -90px 0px;
+  transform: translateY(-30px);
+}
+#customer .cs_etc {
+  display: grid;
+  width: 1200px;
+  margin: 0 auto;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+#customer .cs_etc li {
+  position: relative;
+  background: #ffffff;
+  padding: 20px;
+  height: 200px;
+  margin-bottom: 36px;
+}
+#customer .cs_etc li h3 {
+  font-size: 18px;
+  line-height: 50px;
+}
+#customer .cs_etc li p {
+  line-height: 20px;
+}
+#customer .cs_etc li > a img {
+  display: block;
+  margin: 0 auto;
+  padding: 12px 0;
+}
+#customer .cs_etc li:first-of-type > a:first-of-type {
+  color: #006EFF;
+  line-height: 30px;
+  font-weight: 500;
+}
+#customer .cs_etc > .btn01 {
+  transform: translateX(100px);
+  display: inline-block;
+}
+#customer .cs_etc li:last-of-type .appdown {
+  text-align: center;
+  margin: 0 auto;
+}
+#customer .cs_etc li:last-of-type .appdown > a {
+  color: #006EFF;
+  padding-right: 10px;
+  font-weight: 500;
+}
+#customer .ad {
+  padding: 0;
+  margin-bottom: 30px;
+  width: 1200px;
+  height: 300px;
+}
+#customer .ad > h3 {
+  font-size: 0;
+}
+
+.clearfix {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+#customer .cs_etc .btn01 {
+  padding: 10px 60px;
+  color: #ffffff;
+  background: #225499;
+  line-height: 30px;
+  display: block;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0 auto;
+  text-align: center;
+  width: 100px;
+}/*# sourceMappingURL=main.css.map */

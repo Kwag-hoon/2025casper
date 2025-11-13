@@ -38,12 +38,12 @@ address {
   top: 0px;
   left: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.8);
 }
 
 .m_inner {
   position: absolute;
-  top: 10%;
+  top: 50%;
   left: 50%;
   width: 400px;
   height: 50%;
