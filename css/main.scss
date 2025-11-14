@@ -33,7 +33,7 @@ main {
   }
 
   #movie {
-   
+
     height: 100vh;
     background: $line_color_g;
     overflow: hidden;
@@ -81,6 +81,7 @@ main {
       width: 40px;
       height: 40px;
     }
+
     #next_btn {
       display: inline-block;
       // text-indent: -9999px;
@@ -549,7 +550,7 @@ main {
 
     .member_icon {
       width: 60px;
-      
+
       background-position: -90px 0px;
       transform: translateY(-30px);
     }
@@ -578,55 +579,64 @@ main {
         font-size: 18px;
         line-height: 50px;
       }
-      p{
+
+      p {
         line-height: 20px;
       }
-      >a img{
+
+      >a img {
         display: block;
         margin: 0 auto;
         padding: 12px 0;
       }
     }
 
-    li:first-of-type{
-      >a:first-of-type{
+    li:first-of-type {
+      >a:first-of-type {
         color: $nav_color02;
         line-height: 30px;
         font-weight: 500;
 
       }
     }
-    >.btn01{
+
+    >.btn01 {
       transform: translateX(100px);
-      display:inline-block;
+      display: inline-block;
       // margin: 0 auto;
 
     }
-    li:last-of-type{
 
-      .appdown{
+    li:last-of-type {
+
+      .appdown {
         text-align: center;
         margin: 0 auto;
-      >a{
-        color: $nav_color02;
-        padding-right: 10px;
-        font-weight: 500;
-      }
+
+        >a {
+          color: $nav_color02;
+          padding-right: 10px;
+          font-weight: 500;
+        }
       }
     }
 
   }
 
-  .ad{
-    padding: 0;
-    margin-bottom: 30px;
+  .ad {
+    padding-bottom: 30px;
+    // margin-bottom: 30px;
     width: 1200px;
     height: 300px;
-    >h3{
+    overflow: hidden;
+
+    >h3 {
       font-size: 0;
     }
-  }
+
   
+  }
+
 }
 
 // 플로트 속성 해제
@@ -635,16 +645,17 @@ main {
   content: '';
   display: block;
 }
-#customer .cs_etc .btn01{
-    @include btn1;
-    display: block;
-    position: absolute;
-    // transform: -50%;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    margin: 0 auto; 
-    text-align: center;
-    width: 100px;
 
-  }
+#customer .cs_etc .btn01 {
+  @include btn1;
+  display: block;
+  position: absolute;
+  // transform: -50%;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0 auto;
+  text-align: center;
+  width: 100px;
+
+}

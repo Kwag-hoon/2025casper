@@ -516,10 +516,10 @@ main .orage {
   font-weight: 500;
 }
 #customer .ad {
-  padding: 0;
-  margin-bottom: 30px;
+  padding-bottom: 30px;
   width: 1200px;
   height: 300px;
+  overflow: hidden;
 }
 #customer .ad > h3 {
   font-size: 0;

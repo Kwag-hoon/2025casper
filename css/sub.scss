@@ -23,7 +23,7 @@ header .nav_icon span.fas {
 
 }
 
-main {
+#login {
   position: relative;
   top: 0;
   background: $bg_color_light_g;
@@ -80,4 +80,92 @@ main {
 
   }
 
+}
+
+
+#test_drive {
+  position: relative;
+  .sub_top {
+    background: url('../images/bg-main-test-driving.125a037.jpg') no-repeat;
+    object-fit: cover;
+    width: 100%;
+    height: 400px;
+    text-align: center;
+    color: $txt_color2;
+    >nav{
+      position: absolute;
+      left: 10%;
+      top: 30px;
+      font-size: $t_size_ss;
+    }
+    h2{
+      font-size: $t_size_t3;
+      transform: translateY(150px);
+    }
+    p{
+      transform: translateY(170px);
+      font-size: $t_size_m;
+    }
+  }
+  section{
+    width: 500px;
+    margin: 0 auto;
+    border: 2px solid #f00;
+    padding: 30px;
+    h2{ 
+      font-size: $t_size_t1;
+      text-align: center;
+    }
+    form{
+      position: relative;
+      border: 1px solid #f00;
+      margin-top: 40px;
+      legend{display: none;}
+      p{
+        line-height: 45px;
+        font-size:$t_size_ss ;
+        font-weight: 500;
+      }
+
+      label{
+        font-size: $t_size_ss;
+        font-weight: 500;
+      }
+      input[type=text]{
+        width: 360px;
+        height: 25px;
+        position: absolute;
+       
+        right: 0;
+        transform: translateY(5px);
+        
+      }
+       input[type=date]{
+        width: 360px;
+        height: 25px;
+        position: absolute;
+       
+        right: 0;
+        transform: translateY(5px);
+      }
+      
+      select{
+        width: 367px;
+        height: 32px;
+        position: absolute;
+      
+        right: 0;
+        transform: translateY(5px);
+      }
+       input[type=submit]{
+        width: 49%;
+        height: 25px;
+        
+       
+       
+      }
+      
+
+    }
+  }
 }

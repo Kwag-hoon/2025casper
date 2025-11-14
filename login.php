@@ -3,7 +3,7 @@
 <?php
  include './sub/header.php';
 ?>
-<main>
+<main id="login">
   <form name="로그인" method="post" action="login_check.php">
     <fieldset>
       <legend>로그인</legend>
